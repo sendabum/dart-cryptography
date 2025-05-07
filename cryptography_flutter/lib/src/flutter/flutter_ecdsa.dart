@@ -59,7 +59,7 @@ class FlutterEcdsa extends Ecdsa implements PlatformCryptographicAlgorithm {
 
   @override
   bool get isSupportedPlatform =>
-      FlutterCryptography.isPluginPresent && isCupertino;
+      FlutterCryptography.isPluginPresent || isCupertino;
 
   String get _curveName {
     switch (keyPairType) {
